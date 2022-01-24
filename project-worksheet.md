@@ -8,8 +8,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 1| Project Description | Completed
+|Day 1| Wireframes / Priority Matrix / Timeline | Completed
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches | Incomplete
@@ -95,6 +95,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 ## Additional Libraries
  
  - jQuery: Used for displaying and hiding elements as well as form input
+ - fontawesome: Used for icons and placeholder logo
 
 ## Code Snippet
 
