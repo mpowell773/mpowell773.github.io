@@ -70,8 +70,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| HTML Structure | H | 2hr | hr |
-| Filling in Text | H | 2hr | hr |
+| HTML Structure | H | 2hr | 2.5hr |
+| Filling in Text | H | 2hr | 0 hr |
 | Basic Section Styling | H | 3hr | hr |
 | Regular Nav | H | 3hr | hr |  
 | Project Links | H | 1.5hr|  hr | 

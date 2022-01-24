@@ -1,0 +1,74 @@
+/* Color Palette
+
+Dark Teal: #004c4c
+Teal: #006666
+
+Grey: #777777
+Dark Grey: #333333
+
+Black: black
+
+Neon Green: #0bff01
+
+*/
+
+
+
+body {
+    margin: 0 5%;
+    background-color: black;
+    color: white;
+}
+
+/*---------*/
+/* Header */
+/*---------*/
+
+header {
+    background-color: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/*---------*/
+/* Nav Bar */
+/*---------*/
+
+nav {
+    background-color: #006666;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+nav div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Logo styling */
+
+nav button {
+    border-radius: 100%;
+    background-color: #006666;
+    color: white;
+    border: none;
+    font-size: 22px;
+}
+
+/* Link styling */
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0 8px;
+}
+
+/*------------------*/
+/* About Me Section */
+/*-----------------*/
+
