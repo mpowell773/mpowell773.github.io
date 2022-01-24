@@ -37,15 +37,10 @@ Wireframing Resources:
 
 ## Time/Priority Matrix 
 
-[Link](https://res.cloudinary.com/jkeohan/image/upload/a_270/v1591621734/project1_matrix_ocy5gc_h1kg0m.jpg)
+- [List] (documentation-photos/prio-matrix-list.jpg)
+- [Graph] (documentation-photos/prio-matrix-graph.jpg)
 
-Include a full list of features that have been prioritized based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
-
-Now draw a vertical line on the y axis.  The top of this line should have `High` and the bottom `Low`.  This line will be used to assign a priority to to each feature you wish to include in the project.  
-
-Now create a separate list starting with A and assign it one of the features.  Continue to assign each feature a letter.  Once complete add each letter to the matrix assigning based on what your feel it's prioirty is an how long it will take to implement. If any one feature takes longer than 2hrs to complete than break it down into smaller tasks and reassign them a new letter. 
-
-Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
+My total list adds up to 17.5 hours, which I'm pretty sure is a low ball. I'm guessing that this is around 27-8 hours if I attempt all the details.
 
 ### MVP/PostMVP - 5min
 
@@ -53,14 +48,18 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP (examples)
 
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
+- Build the layout of the site
+- Style appropriately and note responsiveness
+- Nav bar functionality
+- Project links
+- Basic animation of sections and nav bar items
 
 #### PostMVP 
 
-- Anything else that is not MVP
+- Project about sections
+- Contact section backend
+- Skills icons
+- Skills carousel
 
 ## Functional Components
 
@@ -71,29 +70,30 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Hamburger | H | 1hr | hr |
-| Project Previews | H | 3hr | hr |
-| Regular Nav | H | 1hr | hr |  
-| Adding Form | H | 1.5hr|  hr | 
-| Other sections and flex| M | 3hr | hr|
-| Working with API | H | 3hrs|  hr | 
+| HTML Structure | H | 2hr | hr |
+| Filling in Text | H | 2hr | hr |
+| Basic Section Styling | H | 3hr | hr |
+| Regular Nav | H | 3hr | hr |  
+| Project Links | H | 1.5hr|  hr | 
 | Responsive | H | 3hr | hr | hr |
-| Social Media Icons | L | 1hr |  hr |
+| Section Bar Animation| M | 2hr | hr|
+| Nav Bar Underline Animation| M| 2hrs|  hr | 
 | Total | H | 15.5hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Project Hover | L | 3hr | -hr | hr |
-| Banner letters wiggle | L | 1hr | hr |
-| Interactive Banner | M | 4hr | hr |
-| Materialize | H | 4hr | -hr | hr |
-| Bootstrap | H | 4hr | hr |
-| Make own icon | L | 4hr | hr |
-| Total | H | 20hrs| hrs |
+| Show Nav after Intro Sreen| H | 2hr | hr | 
+| Title Screen Interactivity | H | 3hr | hr | 
+| Project About Sections Interaction | H | 3hr | hr |
+| Contact Section Backend | M | 3hr | hr |
+| Skills Section | M | 1hr | hr |
+| Skills Carousel | L | 3hr | hr |
+| Total | H | 14hrs| hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ 
+ - jQuery: Used for displaying and hiding elements as well as form input
 
 ## Code Snippet
 
@@ -111,3 +111,5 @@ function reverse(string) {
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
 **RESOLUTION**: Missing comma after first object in sources {} object
+
+## Citations and References
