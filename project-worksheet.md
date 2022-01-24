@@ -18,7 +18,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-This project is specifically for creating a portfolio website that I can utilize to display future projects in class and later on professionally. I have noticed that I tend to like more minimalistic designs with some flavor of interactivity. Good examples of these designs include [Corey Hughart] (https://coryhughart.com/) and [Gift Egwuenu] (https://www.giftegwuenu.dev/).
+This project is specifically for creating a portfolio website that I can utilize to display future projects in class and later on professionally. I have noticed that I tend to like more minimalistic designs with some flavor of interactivity. Good examples of these designs include [Corey Hughart](https://coryhughart.com/) and [Gift Egwuenu](https://www.giftegwuenu.dev/).
 
 ## Wireframes
 
@@ -46,7 +46,7 @@ My total list adds up to 17.5 hours, which I'm pretty sure is a low ball. I'm gu
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### MVP (examples)
+#### MVP 
 
 - Build the layout of the site
 - Style appropriately and note responsiveness
