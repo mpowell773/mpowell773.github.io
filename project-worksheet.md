@@ -18,14 +18,16 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This project is specifically for creating a portfolio website that I can utilize to display future projects in class and later on professionally. I have noticed that I tend to like more minimalistic designs with some flavor of interactivity. Good examples of these designs include [Corey Hughart] (https://coryhughart.com/) and [Gift Egwuenu] (https://www.giftegwuenu.dev/).
 
 ## Wireframes
 
-Include images of wireframe with a description of the specific wireframe.   
+My wireframes are definitely focused on Mobile, with the key features being listed there. The Desktop (and Tablet sans 1 column) are more for layout purposes. 
 
-- [Mobile](https://i.imgur.com/P3iBEZf.jpg)
-- [Desktop](https://i.imgur.com/xpOWo0E.jpg)
+- [Mobile 1](documentation-photos/wf-mobile-1.jpg)
+- [Mobile 2](documentation-photos/wf-mobile-2.jpg)
+- [Mobile 3](documentation-photos/wf-mobile-3.jpg)
+- [Desktop](documentation-photos/wf-desktop.jpg)
 
 Wireframing Resources:
 
