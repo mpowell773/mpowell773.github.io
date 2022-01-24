@@ -37,8 +37,8 @@ Wireframing Resources:
 
 ## Time/Priority Matrix 
 
-- [List] (documentation-photos/prio-matrix-list.jpg)
-- [Graph] (documentation-photos/prio-matrix-graph.jpg)
+- [List](documentation-photos/prio-matrix-list.jpg)
+- [Graph](documentation-photos/prio-matrix-graph.jpg)
 
 My total list adds up to 17.5 hours, which I'm pretty sure is a low ball. I'm guessing that this is around 27-8 hours if I attempt all the details.
 
@@ -89,7 +89,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Contact Section Backend | M | 3hr | hr |
 | Skills Section | M | 1hr | hr |
 | Skills Carousel | L | 3hr | hr |
-| Total | H | 14hrs| hrs |
+| Footer Button | L | 1.5hr | hr |
+| Total | H | 15.5hrs| hrs |
 
 ## Additional Libraries
  
