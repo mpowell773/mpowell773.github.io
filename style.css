@@ -68,7 +68,61 @@ nav a {
     padding: 0 8px;
 }
 
+
+/*-----*/
+/* Main */
+/*-----*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*-------------------------*/
+/* General Section Styling*/
+/*------------------------*/
+section {
+    margin: 15px auto; 
+    grid-column: 1/4;
+}
+
+
 /*------------------*/
 /* About Me Section */
 /*-----------------*/
 
+#about {
+    background-color: #333333;
+    padding: 10px;
+}
+
+#about p {
+    margin-left: 15%;
+}
+
+/*------------------*/
+/* Projects Section */
+/*-----------------*/
+
+/*------------------*/
+/* Skills Section */
+/*-----------------*/
+
+#skills {
+    background-color: #333333;
+    padding: 10px;
+}
+
+/*------------------*/
+/* Contact Section */
+/*-----------------*/
+
+/*------------------*/
+/* Footer           */
+/*-----------------*/
+
+footer {
+    background-color: #004c4c;
+    padding: 0 50px 100px;
+    border-radius: 25%;
+}
