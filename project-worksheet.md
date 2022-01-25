@@ -72,7 +72,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | 
 | HTML Structure | H | 2hr | 2.5hr |
 | Filling in Text | H | 2hr | 0 hr |
-| Basic Section Styling | H | 3hr | hr |
+| Basic Section Styling | H | 3hr | 5hr |
 | Regular Nav | H | 3hr | hr |  
 | Project Links | H | 1.5hr|  hr | 
 | Responsive | H | 3hr | hr | hr |
