@@ -115,3 +115,5 @@ function reverse(string) {
 **RESOLUTION**: Missing comma after first object in sources {} object
 
 ## Citations and References
+
+I used http://meyerweb.com/eric/tools/css/reset/ to help reset my css margins and etc so I had a cleaner canvas to start on. I also have this referenced in my style.css file.
