@@ -99,21 +99,56 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+I've learned a little bit about promise functions while trying to add a delay to some of my function executions. I defined it in global scope so I could use it throughout my website.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const delay = (time) => {
+    return new Promise(resolve => setTimeout(resolve, time));
+  }
+```
+logo.on('click', (event)=> {
+    logo.addClass('spin');
+    console.log('hamster');
+    delay(1500).then( () => logo.removeClass('spin'));
+  
+})
 ```
 
+```
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+### Issue 1
+I struggled with my border-radius on my footer causing the background to show below it. After about 30 minutes of trying some wild things with a div, I eureka'd and realized that there is top-left and top-right borders.
+
+### Issue 2
+Strange thing happened with my hyperlinks for my nav bar. I changed them to the following:
+**ERROR**:   
+```
+<div>  
+	<a href="#" id="about-me">About Me</a>
+	<a href="#" id="projects">Projects</a>
+	<a href="#" id="skills">Skills</a>
+	<a href="#" id="contact">Contact</a>
+</div>  
+```
+
+Which stretched my nav bar out significantly vertically. Going going back to my initial settings made the bar fine.
+
+**RESOLUTION**: 
+```
+<div>  
+	<a href="#about">About Me</a>
+
+	<a href="#projects">Projects</a>
+	<a href="#skills">Skills</a>
+	<a href="#contact">Contact</a>
+</div>  
+```
 
 ## Citations and References
 
 I used http://meyerweb.com/eric/tools/css/reset/ to help reset my css margins and etc so I had a cleaner canvas to start on. I also have this referenced in my style.css file.
+
+To figure out my spinning animation, I found this lovely example https://codepen.io/teerapuch/pen/vLJXeR .
+
+Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4147112/how-to-jump-to-top-of-browser-page
