@@ -112,6 +112,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    
 }
 
 nav div {
@@ -128,6 +129,11 @@ nav button {
     border: none;
     font-size: 22px;
     padding-left: 10px;
+    transition: .3s;
+}
+
+nav button:hover {
+    color: #0bff01;
 }
 
   /* spin animation */
@@ -153,6 +159,11 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 0 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0bff01;
 }
 
 
@@ -161,7 +172,8 @@ nav a {
 /*-----*/
 
 main {
-    padding-top: 10vh;
+    /* hamster Trying to work around the stupid hitch */
+    padding-top: 20vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
