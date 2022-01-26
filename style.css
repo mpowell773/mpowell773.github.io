@@ -105,14 +105,14 @@ nav {
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center; 
+     
 }
 
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 nav div {
@@ -130,6 +130,7 @@ nav button {
     font-size: 22px;
     padding-left: 10px;
     transition: .2s;
+    /* user-select: none; */
 }
 /* hovers except on mobile: thank you css tricks */
 @media (hover: hover) {
@@ -166,6 +167,7 @@ nav a {
     color: white;
     padding: 0 8px;
     transition: 0.2s;
+    /* user-select: none; */
 }
 
 @media (hover: hover) {

@@ -109,7 +109,7 @@ const navGetStuck = () =>  {
 //About page text
 const showAbout = (event) => {
     //targeting p element to change... grossly
-    const targetAboutText= $(event.target).parent().parent().parent().children('p')
+    const targetAboutText= $(event.target).parent().parent().siblings('p');
     
     //conditional logic to see whether or not text is displayed
     if (targetAboutText.css('display') === 'none') {
@@ -119,10 +119,26 @@ const showAbout = (event) => {
     }
 }
 
+//make buttons do the thing
 $('#about-button-1').on('click', showAbout);
 $('#about-button-2').on('click', showAbout);
 $('#about-button-3').on('click', showAbout);
 
+//Links
+$('#link-button-1').on('click', () => { 
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+})
+
+$('#link-button-2').on('click', () => { 
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+})
+
+$('#link-button-3').on('click', () => { 
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+})
+
+
 
 
 });
+
