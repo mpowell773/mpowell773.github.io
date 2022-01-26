@@ -74,12 +74,8 @@ $('#contact-link').on('click', (event) => {
 const backUpButton = $('#back-to-top-button')
 
 backUpButton.on('click', () => {
-    //change color on click
-    backUpButton.css('color','#0a4408' )
     bodyMove.animate({ scrollTop: 
         0 }, 1000);
-    //change color back
-    delay(250).then (() => {backUpButton.css('color','#0bff01' )})
 });
 
 //Sticky Nav Bar
@@ -89,8 +85,6 @@ window.onscroll = () => {
 
 const navbar = $('nav');
 const stickyBar = navbar.offset().top - 100;
-
-console.log(stickyBar);
 
 //refactored w3's function  using jQuery functionality :: runs both sticky bar and displaying and hiding the nav bar
 const navGetStuck = () =>  {
@@ -105,7 +99,30 @@ const navGetStuck = () =>  {
         } 
 }
     
-// Next step to try to get jarring -ness out is to add the show and hide functionality
+// Next step to try to get jarring -ness out of the show and hide functionality
+
+
+/*----------------*/
+// Projects section
+/*---------------*/
+
+//About page text
+const showAbout = (event) => {
+    //targeting p element to change... grossly
+    const targetAboutText= $(event.target).parent().parent().parent().children('p')
+    
+    //conditional logic to see whether or not text is displayed
+    if (targetAboutText.css('display') === 'none') {
+        targetAboutText.fadeIn();
+    } else {
+        targetAboutText.fadeOut();
+    }
+}
+
+$('#about-button-1').on('click', showAbout);
+$('#about-button-2').on('click', showAbout);
+$('#about-button-3').on('click', showAbout);
+
 
 
 });

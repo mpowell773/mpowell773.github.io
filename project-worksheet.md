@@ -87,9 +87,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Title Screen Interactivity | H | 3hr | hr | 
 | Project About Sections Interaction | H | 3hr | hr |
 | Contact Section Backend | M | 3hr | hr |
-| Skills Section | M | 1hr | hr |
+| Skills Section | M | 1hr | 1.5hr |
 | Skills Carousel | L | 3hr | hr |
-| Footer Button | L | 1.5hr | hr |
+| Footer Button | L | 1.5hr | 1.5hr |
 | Total | H | 15.5hrs| hrs |
 
 ## Additional Libraries
@@ -137,15 +137,25 @@ Which stretched my nav bar out significantly vertically. Going going back to my 
 
 *Update*: I derped and had ID names overlapping.
 
+### Issue 3
+
+you gotta put things in QUOTES
+
+**ERROR**:   
+```
+main.js:118 Uncaught ReferenceError: project is not defined
+    at HTMLButtonElement.showAbout (main.js:118:28)
+    at HTMLButtonElement.dispatch (jquery-3.6.0.min.js:2:43064)
+    at HTMLButtonElement.v.handle (jquery-3.6.0.min.js:2:41048)
+showAbout	@	main.js:118
+dispatch	@	jquery-3.6.0.min.js:2
+v.handle	@	jquery-3.6.0.min.js:2
+ 
+```
+
 **RESOLUTION**: 
 ```
-<div>  
-	<a href="#about">About Me</a>
-
-	<a href="#projects">Projects</a>
-	<a href="#skills">Skills</a>
-	<a href="#contact">Contact</a>
-</div>  
+targetProject.addClass('project-opacity'); 
 ```
 
 ## Citations and References
