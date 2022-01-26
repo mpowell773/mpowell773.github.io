@@ -73,7 +73,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | HTML Structure | H | 2hr | 2.5hr |
 | Filling in Text | H | 2hr | 0 hr |
 | Basic Section Styling | H | 3hr | 5hr |
-| Regular Nav | H | 3hr | hr |  
+| Regular Nav | H | 3hr | 3hr |  
 | Project Links | H | 1.5hr|  hr | 
 | Responsive | H | 3hr | hr | hr |
 | Section Bar Animation| M | 2hr | hr|
@@ -83,7 +83,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Show Nav after Intro Sreen| H | 2hr | hr | 
+| Show Nav after Intro Sreen| H | 2hr | 1hr | 
 | Title Screen Interactivity | H | 3hr | hr | 
 | Project About Sections Interaction | H | 3hr | hr |
 | Contact Section Backend | M | 3hr | hr |
