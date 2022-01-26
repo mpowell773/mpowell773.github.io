@@ -20,7 +20,7 @@ const delay = (time) => {
  //move to specific part of webpage
  const linkMove = (section) => {
     bodyMove.animate({ 
-        scrollTop: section.offset().top }, 1000);
+        scrollTop: section.offset().top - 60 }, 1000);
 }
 
 
@@ -67,6 +67,45 @@ $('#contact-link').on('click', (event) => {
     event.preventDefault();
     linkMove($('#contact'));
 })
+
+//
+//Footer Button to Top
+// not technically nav bar but still navigation related
+const backUpButton = $('#back-to-top-button')
+
+backUpButton.on('click', () => {
+    //change color on click
+    backUpButton.css('color','#0a4408' )
+    bodyMove.animate({ scrollTop: 
+        0 }, 1000);
+    //change color back
+    delay(250).then (() => {backUpButton.css('color','#0bff01' )})
+});
+
+//Sticky Nav Bar
+//when user is scrolling, executes navGetStuck
+window.onscroll = () => {
+    navGetStuck()};
+
+const navbar = $('nav');
+const stickyBar = navbar.offset().top - 100;
+
+console.log(stickyBar);
+
+//refactored w3's function  using jQuery functionality :: runs both sticky bar and displaying and hiding the nav bar
+const navGetStuck = () =>  {
+    if (window.scrollY >= stickyBar) {
+        
+        navbar.addClass('sticky');
+        navbar.slideDown();
+   
+    }   else if (window.scrollY <= stickyBar) {
+            navbar.removeClass('sticky');
+            navbar.slideUp();
+        } 
+}
+    
+// Next step to try to get jarring -ness out is to add the show and hide functionality
 
 
 });

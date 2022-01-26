@@ -99,10 +99,16 @@ header h2 {
 nav {
     background-color: #006666;
     width: 100vw;
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav div {
@@ -118,14 +124,15 @@ nav button {
     color: white;
     border: none;
     font-size: 22px;
+    padding-left: 10px;
 }
 
   /* spin animation */
   .spin {
   animation-name: spin;
-  animation-duration: 1500ms;
+  animation-duration: 1750ms;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   }
 
 @keyframes spin {
@@ -133,7 +140,7 @@ nav button {
         transform:rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+        transform:rotate(-2500deg);
     }
 }
 
@@ -154,7 +161,6 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
-
 }
 
 /*-------------------------*/

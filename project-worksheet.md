@@ -132,7 +132,9 @@ Strange thing happened with my hyperlinks for my nav bar. I changed them to the 
 </div>  
 ```
 
-Which stretched my nav bar out significantly vertically. Going going back to my initial settings made the bar fine.
+Which stretched my nav bar out significantly vertically. Going going back to my initial settings made the bar fine. 
+
+*Update*: I derped and had ID names overlapping.
 
 **RESOLUTION**: 
 ```
@@ -152,3 +154,6 @@ I used http://meyerweb.com/eric/tools/css/reset/ to help reset my css margins an
 To figure out my spinning animation, I found this lovely example https://codepen.io/teerapuch/pen/vLJXeR .
 
 Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4147112/how-to-jump-to-top-of-browser-page
+
+
+Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
