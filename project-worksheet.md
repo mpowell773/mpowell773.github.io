@@ -96,6 +96,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
  
  - jQuery: Used for displaying and hiding elements as well as form input
  - fontawesome: Used for icons and placeholder logo
+ - Google Fonts: Using roboto
 
 ## Code Snippet
 
