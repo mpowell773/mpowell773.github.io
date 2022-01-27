@@ -193,7 +193,7 @@ main {
     /* hamster Trying to work around the stupid hitch */
     padding-top: 20vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 50px;
 }
 
@@ -201,7 +201,7 @@ main {
 /* General Section Styling*/
 /*------------------------*/
 section {
-    grid-column: 1/4;
+    grid-column: 1/5;
     margin: 0 5%;
 }
 
@@ -231,10 +231,21 @@ section h2 {
     margin-top: 15px;
 }
 
+/* #about-picture {
+    display: block;
+    height: 20vh;
+    width: 20vw;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+} */
+
 #about p {
     margin: 5% 12% 5%;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 100;
     line-height: 1.2;
 
 }
@@ -243,8 +254,14 @@ section h2 {
 /* Projects Section */
 /*-----------------*/
 
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 #projects h2 {
     margin-bottom: 20px;
+    grid-column: 1/4; 
 }
 
 #projects p {
@@ -303,14 +320,17 @@ article button:active {
 
 #project-1 {
     background-image: url(website-photos/holy-cross-wilderness-1.jpeg);
+    grid-column: 1/4;
 }
 
 #project-2 {
     background-image: url(website-photos/holy-cross-wilderness-2.jpeg);
+    grid-column: 1/4;
 }
 
 #project-3 {
     background-image: url(website-photos/holy-cross-wilderness-3.jpeg);
+    grid-column: 1/4;
 }
 
 .project-opacity {
