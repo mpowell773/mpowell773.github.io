@@ -72,12 +72,12 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | 
 | HTML Structure | H | 2hr | 2.5hr |
 | Filling in Text | H | 2hr | 0 hr |
-| Basic Section Styling | H | 3hr | 5hr |
+| Basic Section Styling | H | 3hr | 6hr |
 | Regular Nav | H | 3hr | 3hr |  
 | Project Links | H | 1.5hr|  .5hr | 
 | Responsive | H | 3hr | 2hr | 
-| Form Integration | M | 2hr| hr |
-| Total | H | 15.5hrs| hrs |
+| Form Integration | M | 2hr| 1hr |
+| Total | H | 15.5hrs| 14.5hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |

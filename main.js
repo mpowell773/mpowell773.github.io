@@ -196,8 +196,36 @@ $('#link-button-3').on('click', () => {
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
 })
 
+/*------------*/
+//Form Section
+/*------------*/
 
+//prevent all forms from submitting and refreshing page
+$('#name-form').on('submit', (event) => {
+    event.preventDefault();
+})
 
+$('#email-form').on('submit', (event) => {
+    event.preventDefault();
+})
+
+$('#message-form').on('submit', (event) => {
+    event.preventDefault();
+})
+
+//submit button clears text fields, sends data off, and gives confirmation
+
+$('#submit-form').on('click', (event) => {
+    //code for future sending off
+    
+    //reset fields
+    $('#name-form').html('<input type="text" id="name-input">');
+    $('#email-form').html('<input type="text" id="name-input">');
+    $('#message-form').html('<input type="text" id="name-input">');
+
+    //confirmation
+    window.confirm('Thanks for contacting me! I\'ll be in touch soon.');
+})
 
 });
 
