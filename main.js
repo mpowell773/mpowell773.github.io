@@ -23,8 +23,16 @@ const delay = (time) => {
         scrollTop: section.offset().top - 60 }, 1000);
 }
 
+/*--------------*/
+//Landing Section
+/*--------------*/
 
+const showLandingText = () => {
+    delay(500).then ( () => {$('h1').fadeIn(500)});
+    delay(1500).then ( () => {$('h2').slideDown()});
+}
 
+showLandingText();
 
 /*------------------*/
 // nav bar integration
