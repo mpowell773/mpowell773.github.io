@@ -195,4 +195,13 @@ Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4
 
 Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
-Beginning the ripple animation by setting the canvas: https://www.mtmckenna.com/posts/2018/02/02/creating-a-canvas-overlay
+
+#### Ripple animation
+
+Beginning the ripple animation by setting the canvas: https://www.mtmckenna.com/posts/2018/02/02/creating-a-canvas-overlay 
+
+//https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
+//Great tut on getting creating a dot
+
+//https://www.youtube.com/watch?v=gm1QtePAYTM&t=2499s&ab_channel=TraversyMedia
+//Super useful crash course on canvas 

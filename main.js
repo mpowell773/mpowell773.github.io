@@ -34,49 +34,89 @@ const showLandingText = () => {
 
 showLandingText();
 
-
+//My horrifying animation section for ripple effect
 
 const canvas = $('#canvas')
-const context = canvas[0].getContext('2d');
-
 
 //https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
 //Great tut on getting creating a dot
+
+//https://www.youtube.com/watch?v=gm1QtePAYTM&t=2499s&ab_channel=TraversyMedia
+//Super useful crash course on canvas 
+
 //jQuery was really struggling with the getBoundingClientRect() so I used some vanilla js here
 function getPosition(event){
+   
     //this code grabs the width and height of the header and then sets the canvas width and height to that.
     let headerArea = document.getElementById('landing-page').getBoundingClientRect();
 
     let headerAreaX = headerArea.right - headerArea.left;
     let headerAreaY = headerArea.bottom - headerArea.top;
 
-    canvas.attr('width', headerAreaX);
-    canvas.attr('height', headerAreaY);
+     canvas.attr('width', headerAreaX);
+     canvas.attr('height', headerAreaY);
     
     //this section sets canvas X and Y so that the ripple function can properly draw the circles where the click happened
     let rect = document.getElementById('canvas').getBoundingClientRect();
-    console.log(event.clientY, rect.top)
-    console.log(event.clientX, rect.left)
     let x = event.clientX - rect.left; 
     let y = event.clientY - rect.top; 
-    ripple(x,y);
+    ripple(x, y);
 }
 
 const ripple = (x,y) => {
+    //setting context as well as making sure we have canvas width and height defined within the function
+   const context = document.getElementById('canvas').getContext('2d');
+   let resetX = document.getElementById('canvas').width;
+   let resetY = document.getElementById('canvas').height;
+
+   //circle object to store some parameters
+    const circle = {
+        startX: x,
+        startY: y,
+        size: 3,
+    }
+
+   
+    //This is a fun little function that does clearRect()'s method. 
+    /*
+    const clearCanvas = () => {
+        context.beginPath();
+        context.fillStyle = 'rgba(0,0,0,1)';
+        context.fillRect(0, 0, resetX, resetY);    
+        context.stroke();
+    }
+    */
     
-   const pointSize = 3;
-   context.fillStyle = 'red'
-   context.beginPath(); //Start path
-   context.arc(x, y, pointSize, 0, Math.PI * 2, true); // Draw a point using the arc function of the canvas with a point structure.
-   const point = context.fill(); 
+    //function to draw circle and fill with color
+    const drawCircle = () => {
+        context.beginPath();
+        context.arc(circle.startX, circle.startY, circle.size, 0, Math.PI * 2);
+        context.fillStyle = 'purple';
+        context.fill();
+    }  
+    
+    //animation
+    function animate() {
+       
+        drawCircle();
+       //logic to make the circle grow and then clear
+        if (circle.size < 100) {
+            circle.size += 2;
+            requestAnimationFrame(animate);
+        } else {
+            context.clearRect(0, 0, resetX, resetY), 500;
+            return
+        }
 
-    // setTimeout(() => event.target.remove($rippleElement), 500);
-}
+        
+        
+        
+    }
+    //gotta call the animate function
+    animate();
+} 
 
-
-
-
-
+//make it all go clicky clicky
 canvas.on('click', (event) =>{
     getPosition(event);
 });
