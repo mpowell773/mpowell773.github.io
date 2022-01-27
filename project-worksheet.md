@@ -85,7 +85,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | 
 | Show Nav after Intro Sreen| H | 2hr | 1hr | 
 | Title Screen Interactivity | H | 3hr | hr | 
-| Project About Sections Interaction | H | 3hr | hr |
+| Project About Sections Interaction | H | 3hr | 2hr |
 | Contact Section Backend | M | 3hr | hr |
 | Skills Section | M | 1hr | 1.5hr |
 | Skills Carousel | L | 3hr | hr |
@@ -157,6 +157,9 @@ v.handle	@	jquery-3.6.0.min.js:2
 ```
 targetProject.addClass('project-opacity'); 
 ```
+### Issue 4
+
+I was having a "hitch" occur with my nav bar. Long story short, we wrapped the nav in a div, set that visibility to none initially, and then also needed to adjust the jQuery animation .slideUp() to hide.()
 
 ## Citations and References
 

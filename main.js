@@ -84,18 +84,21 @@ window.onscroll = () => {
     navGetStuck()};
 
 const navbar = $('nav');
+// hamster
 const stickyBar = navbar.offset().top - 100;
 
 //refactored w3's function  using jQuery functionality :: runs both sticky bar and displaying and hiding the nav bar
 const navGetStuck = () =>  {
     if (window.scrollY >= stickyBar) {
-        
+        $('#nav-wrap').css('visibility', 'visible');
         navbar.addClass('sticky');
         navbar.slideDown();
    
     }   else if (window.scrollY <= stickyBar) {
+            $('#nav-wrap').css('visibility', 'none');
             navbar.removeClass('sticky');
-            navbar.slideUp();
+            navbar.hide();
+            
         } 
 }
     

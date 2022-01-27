@@ -99,6 +99,10 @@ header h2 {
 /* Nav Bar */
 /*---------*/
 
+#nav-wrap {
+    visibility: hidden;
+}
+
 nav {
     background-color: #006666;
     width: 100vw;
@@ -112,7 +116,7 @@ nav {
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%;    
+    width: 100%;   
 }
 
 nav div {

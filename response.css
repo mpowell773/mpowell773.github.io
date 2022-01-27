@@ -1,0 +1,29 @@
+
+  /* Medium devices (tablets, 768px and up) */
+  @media screen and (min-width: 768px) {
+
+    nav {
+        padding: 8px 0;
+        font-size: 18px;
+    }
+
+    nav button {
+        font-size: 30px;
+    }
+
+    nav a {
+        padding: 0 25px;
+    }
+
+    
+
+  }
+  
+
+
+
+
+  /* Large devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) {
+    
+  }
