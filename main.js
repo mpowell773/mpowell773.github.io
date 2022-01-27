@@ -76,24 +76,25 @@ const ripple = (x,y) => {
         size: 3,
     }
 
-   
-    //This is a fun little function that does clearRect()'s method. 
-    /*
-    const clearCanvas = () => {
-        context.beginPath();
-        context.fillStyle = 'rgba(0,0,0,1)';
-        context.fillRect(0, 0, resetX, resetY);    
-        context.stroke();
-    }
-    */
+
+    const colorRipple = [
+        'rgba(0, 150, 150, 0.03)',
+        'rgba(0, 76, 76, 0.03)',
+        'rgba(0, 102, 102, 0.03)',
+        'rgba(0, 30, 30, 0.03)'
+
+    ];
+
+    const random = Math.floor(Math.random() * 4);
     
     //function to draw circle and fill with color
     const drawCircle = () => {
         context.beginPath();
         context.arc(circle.startX, circle.startY, circle.size, 0, Math.PI * 2);
-        context.fillStyle = 'purple';
+        context.fillStyle = colorRipple[random];
         context.fill();
     }  
+
     
     //animation
     function animate() {
@@ -101,11 +102,11 @@ const ripple = (x,y) => {
         drawCircle();
        //logic to make the circle grow and then clear
         if (circle.size < 100) {
-            circle.size += 2;
+            circle.size += 5;
             requestAnimationFrame(animate);
         } else {
-            context.clearRect(0, 0, resetX, resetY), 500;
-            return
+            delay(100).then( () => context.clearRect(0, 0, resetX, resetY));
+            return;
         }
 
         
