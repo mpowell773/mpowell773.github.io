@@ -34,6 +34,35 @@ const showLandingText = () => {
 
 showLandingText();
 
+
+
+/* https://natclark.com/tutorials/javascript-ripple-effect/ Holy this tutorial missed a huge point about having everything wrapped in the ripple function. I had to go and check their source code LUL*/
+const canvas = $('#canvas');
+
+const ripple = (e) => {
+    console.log('hamster')
+    let width = e.target.offsetWidth;
+    let height = e.target.offsetHeight;
+
+    width >= height ? (height = width) : (width = height);
+
+    const $rippleElement = $('<span>');
+    e.target.append($rippleElement);
+
+    $rippleElement.style = `
+        height: ${height}px !important;
+        left: ${e.pageX -e.target.offsetLeft - width / 2}px !important;
+        top: ${e.pageY - e.target.offsetTop - height / 2}px !important;
+        width: ${width}px !important;
+        `.trim();
+
+    $rippleElement.addClass(`ripple`);
+    setTimeout(() => e.target.remove($rippleElement), 500);
+}
+
+canvas.on('click', ripple);
+
+
 /*------------------*/
 // nav bar integration
 /*------------------*/
