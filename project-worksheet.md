@@ -83,10 +83,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Show Nav after Intro Sreen| H | 2hr | 1hr | 
-| Title Screen Interactivity | H | 3hr | hr | 
+| Title Screen Interactivity | H | 3hr | 6hr | 
 | Section Bar Animation| M | 2hr | hr|
 | Project About Sections Interaction | H | 3hr | 2hr |
-| Contact Section Backend | M | 3hr | hr |
+| Contact Section Backend | M | 3hr | 0hr |
 | Skills Section | M | 1hr | 1.5hr |
 | Skills Carousel | L | 3hr | hr |
 | Footer Button | L | 1.5hr | 1.5hr |
