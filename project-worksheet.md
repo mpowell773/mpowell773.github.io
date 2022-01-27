@@ -77,7 +77,6 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Project Links | H | 1.5hr|  .5hr | 
 | Responsive | H | 3hr | 2hr | 
 | Form Integration | M | 2hr| hr |
-| Nav Bar Underline Animation| M| 2hrs|  hr | 
 | Total | H | 15.5hrs| hrs |
 
 #### PostMVP
@@ -91,6 +90,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Skills Section | M | 1hr | 1.5hr |
 | Skills Carousel | L | 3hr | hr |
 | Footer Button | L | 1.5hr | 1.5hr |
+| Nav Bar Underline Animation| M| 2hrs|  hr | 
 | Total | H | 15.5hrs| hrs |
 
 ## Additional Libraries
@@ -162,6 +162,28 @@ targetProject.addClass('project-opacity');
 
 I was having a "hitch" occur with my nav bar. Long story short, we wrapped the nav in a div, set that visibility to none initially, and then also needed to adjust the jQuery animation .slideUp() to hide.()
 
+### Issue 5
+
+I'm messing around with canvas for some touch screen interactivity on my landing page, and I was running into this error:
+
+**ERROR**:   
+```
+jquery-3.6.0.min.js:2 Uncaught TypeError: canvas.getContext is not a function
+    at HTMLDocument.<anonymous> (main.js:41:24)
+    at e (jquery-3.6.0.min.js:2:30038)
+    at t (jquery-3.6.0.min.js:2:30340)
+ 
+```
+
+The resolution was very simple and I'm not 100% sure why it was needed, but seems like it's some form of jQuery syntax that I don't know about yet.
+
+
+**RESOLUTION**: 
+```
+const context = canvas[0].getContext('2d'); 
+```
+the \[0\] was missing and caused the error. 
+
 ## Citations and References
 
 I used http://meyerweb.com/eric/tools/css/reset/ to help reset my css margins and etc so I had a cleaner canvas to start on. I also have this referenced in my style.css file.
@@ -172,3 +194,5 @@ Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4
 
 
 Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+
+Beginning the ripple animation by setting the canvas: https://www.mtmckenna.com/posts/2018/02/02/creating-a-canvas-overlay

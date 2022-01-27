@@ -36,31 +36,50 @@ showLandingText();
 
 
 
-/* https://natclark.com/tutorials/javascript-ripple-effect/ Holy this tutorial missed a huge point about having everything wrapped in the ripple function. I had to go and check their source code LUL*/
-const canvas = $('#canvas');
+const canvas = $('#canvas')
+const context = canvas[0].getContext('2d');
 
-const ripple = (e) => {
-    console.log('hamster')
-    let width = e.target.offsetWidth;
-    let height = e.target.offsetHeight;
 
-    width >= height ? (height = width) : (width = height);
+//https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
+//Great tut on getting creating a dot
+//jQuery was really struggling with the getBoundingClientRect() so I used some vanilla js here
+function getPosition(event){
+    //this code grabs the width and height of the header and then sets the canvas width and height to that.
+    let headerArea = document.getElementById('landing-page').getBoundingClientRect();
 
-    const $rippleElement = $('<span>');
-    e.target.append($rippleElement);
+    let headerAreaX = headerArea.right - headerArea.left;
+    let headerAreaY = headerArea.bottom - headerArea.top;
 
-    $rippleElement.style = `
-        height: ${height}px !important;
-        left: ${e.pageX -e.target.offsetLeft - width / 2}px !important;
-        top: ${e.pageY - e.target.offsetTop - height / 2}px !important;
-        width: ${width}px !important;
-        `.trim();
-
-    $rippleElement.addClass(`ripple`);
-    setTimeout(() => e.target.remove($rippleElement), 500);
+    canvas.attr('width', headerAreaX);
+    canvas.attr('height', headerAreaY);
+    
+    //this section sets canvas X and Y so that the ripple function can properly draw the circles where the click happened
+    let rect = document.getElementById('canvas').getBoundingClientRect();
+    console.log(event.clientY, rect.top)
+    console.log(event.clientX, rect.left)
+    let x = event.clientX - rect.left; 
+    let y = event.clientY - rect.top; 
+    ripple(x,y);
 }
 
-canvas.on('click', ripple);
+const ripple = (x,y) => {
+    
+   const pointSize = 3;
+   context.fillStyle = 'red'
+   context.beginPath(); //Start path
+   context.arc(x, y, pointSize, 0, Math.PI * 2, true); // Draw a point using the arc function of the canvas with a point structure.
+   const point = context.fill(); 
+
+    // setTimeout(() => event.target.remove($rippleElement), 500);
+}
+
+
+
+
+
+canvas.on('click', (event) =>{
+    getPosition(event);
+});
 
 
 /*------------------*/
