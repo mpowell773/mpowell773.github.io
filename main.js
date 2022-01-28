@@ -76,7 +76,7 @@ const ripple = (x,y) => {
         size: 3,
     }
 
-
+//array to hold different color shades of ripple
     const colorRipple = [
         'rgba(0, 150, 150, 0.03)',
         'rgba(0, 76, 76, 0.03)',
@@ -85,7 +85,7 @@ const ripple = (x,y) => {
 
     ];
 
-    const random = Math.floor(Math.random() * 4);
+    const random = Math.floor(Math.random() * colorRipple.length);
     
     //function to draw circle and fill with color
     const drawCircle = () => {
@@ -178,10 +178,10 @@ backUpButton.on('click', () => {
 //Sticky Nav Bar
 //when user is scrolling, executes navGetStuck
 window.onscroll = () => {
-    navGetStuck()};
+    navGetStuck();
+};
 
 const navbar = $('nav');
-// hamster
 const stickyBar = navbar.offset().top - 100;
 
 //refactored w3's function  using jQuery functionality :: runs both sticky bar and displaying and hiding the nav bar
@@ -199,16 +199,13 @@ const navGetStuck = () =>  {
         } 
 }
     
-// Next step to try to get jarring -ness out of the show and hide functionality
-
-
 /*----------------*/
 // Projects section
 /*---------------*/
 
 //About page text
 const showAbout = (event) => {
-    //targeting p element to change... grossly
+    //targeting p element to change
     const targetAboutText= $(event.target).parent().parent().siblings('p');
     
     //conditional logic to see whether or not text is displayed

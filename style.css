@@ -266,17 +266,6 @@ section h2 {
     margin-top: 15px;
 }
 
-/* #about-picture {
-    display: block;
-    height: 20vh;
-    width: 20vw;
-}
-
-img {
-    height: 100px;
-    width: 100px;
-} */
-
 #about p {
     margin: 5% 12% 5%;
     font-size: 18px;
@@ -311,7 +300,6 @@ img {
     padding: 10px 25px;
     background-color: rgba(0, 0, 0, .7);
     overflow: scroll;
-  
 }
 
 article {
@@ -472,7 +460,6 @@ article button:active {
 #message-form input {
     width: 96.8%;
     padding-bottom: 75px;
-    
 }
 
 /* submit button */
@@ -522,8 +509,6 @@ article button:active {
     color: #0a4408;
 }
 
-
-
 /*------------------*/
 /* Footer           */
 /*-----------------*/
@@ -564,5 +549,3 @@ footer h4 {
     padding-top: 15px;
     font-size: 12px;
 }
-
-
