@@ -77,13 +77,13 @@ My total list adds up to 17.5 hours, which I'm pretty sure is a low ball. I'm gu
 | Nav Bar Underline Animation| M| 2hrs|  .5hr | 
 | Total | H | 15.5hrs| 13hrs |
 
-#### Additional Libraries
+## Additional Libraries
  
  - jQuery: Used for displaying and hiding elements as well as form input
  - fontawesome: Used for icons and placeholder logo
  - Google Fonts: Using roboto
 
-#### Code Snippet
+## Code Snippet
 
 I've learned a little bit about promise functions while trying to add a delay to some of my function executions. I defined it in global scope so I could use it throughout my website.
 
@@ -180,7 +180,7 @@ canvas.on('click', (event) =>{
 });
 
 ```
-#### Issues and Resolutions
+## Issues and Resolutions
 
 ### Issue 1
 I struggled with my border-radius on my footer causing the background to show below it. After about 30 minutes of trying some wild things with a div, I eureka'd and realized that there is top-left and top-right borders.
@@ -270,7 +270,7 @@ Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4
 Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 
-#### Ripple animation
+### Ripple animation
 
 Beginning the ripple animation by setting the canvas: https://www.mtmckenna.com/posts/2018/02/02/creating-a-canvas-overlay 
 
