@@ -48,9 +48,6 @@ table {
 	border-spacing: 0;
 }
 
-/* big test for overscroll */
-
-
 /* Color Palette
 
 Dark Teal: #004c4c
@@ -97,12 +94,15 @@ header h1 {
     font-weight: 700;
     padding: 15px;
     display: none;
+    user-select: none;
+
 }
 
 header h2 {
     font-size: 26px;
     font-style: italic;
     display: none;
+    user-select: none;
 }
 
 /*---------*/
@@ -182,7 +182,7 @@ nav a {
     color: white;
     padding: 0 8px;
     transition: 0.2s;
-    /* user-select: none; */
+    -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
@@ -282,6 +282,11 @@ img {
     font-size: 18px;
     font-weight: 100;
     line-height: 1.2;
+}
+
+#about div{
+    overflow: scroll;
+    height: 90%;
 
 }
 
@@ -305,6 +310,7 @@ img {
     font-weight: 100;
     padding: 10px 25px;
     background-color: rgba(0, 0, 0, .7);
+    overflow: scroll;
   
 }
 
@@ -337,6 +343,7 @@ article button {
     font-size: 20px;
     transition: .2s;  
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
