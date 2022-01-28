@@ -10,9 +10,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Day 1| Project Description | Completed
 |Day 1| Wireframes / Priority Matrix / Timeline | Completed
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches | Incomplete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | Completed
+|Day 4| MVP & Bug Fixes | Completed
+|Day 5| Final Touches | Completed
 |Day 6| Present | Incomplete
 
 
@@ -29,22 +29,12 @@ My wireframes are definitely focused on Mobile, with the key features being list
 - [Mobile 3](documentation-photos/wf-mobile-3.jpg)
 - [Desktop](documentation-photos/wf-desktop.jpg)
 
-Wireframing Resources:
-
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
-
-
 ## Time/Priority Matrix 
 
 - [List](documentation-photos/prio-matrix-list.jpg)
 - [Graph](documentation-photos/prio-matrix-graph.jpg)
 
 My total list adds up to 17.5 hours, which I'm pretty sure is a low ball. I'm guessing that this is around 27-8 hours if I attempt all the details.
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
 
@@ -60,12 +50,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Contact section backend
 - Skills icons
 - Skills carousel
-
-## Functional Components
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into smaller components.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the portfolio. Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the portfolio must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
@@ -84,22 +68,22 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | --- | :---: |  :---: | :---: | 
 | Show Nav after Intro Sreen| H | 2hr | 1hr | 
 | Title Screen Interactivity | H | 3hr | 6hr | 
-| Section Bar Animation| M | 2hr | hr|
+| Section Bar Animation| M | 2hr | .5hr|
 | Project About Sections Interaction | H | 3hr | 2hr |
 | Contact Section Backend | M | 3hr | 0hr |
 | Skills Section | M | 1hr | 1.5hr |
-| Skills Carousel | L | 3hr | hr |
+| Skills Carousel | L | 3hr | 0hr |
 | Footer Button | L | 1.5hr | 1.5hr |
-| Nav Bar Underline Animation| M| 2hrs|  hr | 
-| Total | H | 15.5hrs| hrs |
+| Nav Bar Underline Animation| M| 2hrs|  .5hr | 
+| Total | H | 15.5hrs| 13hrs |
 
-## Additional Libraries
+#### Additional Libraries
  
  - jQuery: Used for displaying and hiding elements as well as form input
  - fontawesome: Used for icons and placeholder logo
  - Google Fonts: Using roboto
 
-## Code Snippet
+#### Code Snippet
 
 I've learned a little bit about promise functions while trying to add a delay to some of my function executions. I defined it in global scope so I could use it throughout my website.
 
@@ -114,10 +98,89 @@ logo.on('click', (event)=> {
     delay(1500).then( () => logo.removeClass('spin'));
   
 })
-```
+
+For my little interactive events that happen on the landing page, I had to go to multiple resources and different tutorials and splice them all together. I'm sure a year from now, I'm going to look at this code and see a million ways to improve it, but I'm happy that I even got this to function in the first place.
 
 ```
-## Issues and Resolutions
+function getPosition(event){
+   
+    //this code grabs the width and height of the header and then sets the canvas width and height to that.
+    let headerArea = document.getElementById('landing-page').getBoundingClientRect();
+
+    let headerAreaX = headerArea.right - headerArea.left;
+    let headerAreaY = headerArea.bottom - headerArea.top;
+
+     canvas.attr('width', headerAreaX);
+     canvas.attr('height', headerAreaY);
+    
+    //this section sets canvas X and Y so that the ripple function can properly draw the circles where the click happened
+    let rect = document.getElementById('canvas').getBoundingClientRect();
+    let x = event.clientX - rect.left; 
+    let y = event.clientY - rect.top; 
+    ripple(x, y);
+}
+
+const ripple = (x,y) => {
+    //setting context as well as making sure we have canvas width and height defined within the function
+   const context = document.getElementById('canvas').getContext('2d');
+   let resetX = document.getElementById('canvas').width;
+   let resetY = document.getElementById('canvas').height;
+
+   //circle object to store some parameters
+    const circle = {
+        startX: x,
+        startY: y,
+        size: 3,
+    }
+
+
+    const colorRipple = [
+        'rgba(0, 150, 150, 0.03)',
+        'rgba(0, 76, 76, 0.03)',
+        'rgba(0, 102, 102, 0.03)',
+        'rgba(0, 30, 30, 0.03)'
+
+    ];
+
+    const random = Math.floor(Math.random() * 4);
+    
+    //function to draw circle and fill with color
+    const drawCircle = () => {
+        context.beginPath();
+        context.arc(circle.startX, circle.startY, circle.size, 0, Math.PI * 2);
+        context.fillStyle = colorRipple[random];
+        context.fill();
+    }  
+
+    
+    //animation
+    function animate() {
+       
+        drawCircle();
+       //logic to make the circle grow and then clear
+        if (circle.size < 100) {
+            circle.size += 5;
+            requestAnimationFrame(animate);
+        } else {
+            delay(100).then( () => context.clearRect(0, 0, resetX, resetY));
+            return;
+        }
+
+        
+        
+        
+    }
+    //gotta call the animate function
+    animate();
+} 
+
+//make it all go clicky clicky
+canvas.on('click', (event) =>{
+    getPosition(event);
+});
+
+```
+#### Issues and Resolutions
 
 ### Issue 1
 I struggled with my border-radius on my footer causing the background to show below it. After about 30 minutes of trying some wild things with a div, I eureka'd and realized that there is top-left and top-right borders.
@@ -140,7 +203,7 @@ Which stretched my nav bar out significantly vertically. Going going back to my 
 
 ### Issue 3
 
-you gotta put things in QUOTES
+You have to put things in QUOTES.
 
 **ERROR**:   
 ```
@@ -164,7 +227,7 @@ I was having a "hitch" occur with my nav bar. Long story short, we wrapped the n
 
 ### Issue 5
 
-I'm messing around with canvas for some touch screen interactivity on my landing page, and I was running into this error:
+I messed around with canvas for some touch screen interactivity on my landing page, and I was running into this error:
 
 **ERROR**:   
 ```
@@ -184,14 +247,25 @@ const context = canvas[0].getContext('2d');
 ```
 the \[0\] was missing and caused the error. 
 
+*Update*: I still was having problems with jQuery and canvas, so the only jQuery I utilized during the ripple section was for the action of touching the canvas. For the rest, I used vanilla js selectors and it worked much more smoothly.
+
 ## Citations and References
 
+
+### Reset browser CSS
 I used http://meyerweb.com/eric/tools/css/reset/ to help reset my css margins and etc so I had a cleaner canvas to start on. I also have this referenced in my style.css file.
+
+### Logo Spinning 
 
 To figure out my spinning animation, I found this lovely example https://codepen.io/teerapuch/pen/vLJXeR .
 
+
+### Scrolling page jumps
+
 Super quick way to jump to top of webpage: https://stackoverflow.com/questions/4147112/how-to-jump-to-top-of-browser-page
 
+
+### Sticky Nav
 
 Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
@@ -200,8 +274,8 @@ Sticky icky nav bar: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 Beginning the ripple animation by setting the canvas: https://www.mtmckenna.com/posts/2018/02/02/creating-a-canvas-overlay 
 
-//https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
-//Great tut on getting creating a dot
+Great tut on getting creating a dot: //https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
 
-//https://www.youtube.com/watch?v=gm1QtePAYTM&t=2499s&ab_channel=TraversyMedia
-//Super useful crash course on canvas 
+
+//Super useful crash course on canvas: https://www.youtube.com/watch?v=gm1QtePAYTM&t=2499s&ab_channel=TraversyMedia
+
