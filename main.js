@@ -223,7 +223,7 @@ $('#about-button-3').on('click', showAbout);
 
 //Links
 $('#link-button-1').on('click', () => { 
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+    window.open("https://mpowell773.github.io/react-api-project/");
 })
 
 $('#link-button-2').on('click', () => { 
@@ -262,7 +262,7 @@ $('#submit-form').on('click', (event) => {
     $('#message-form').html('<input type="text" id="name-input">');
 
     //confirmation
-    window.confirm('Thanks for contacting me! I\'ll be in touch soon.');
+    window.confirm('Thanks for contacting me! Unfortunately, this form is not yet working, but I am learning about backend in the current unit, so just wait a couple of weeks, resubmit, and I\'ll get back to you!');
 })
 
 });
