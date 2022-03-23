@@ -227,7 +227,7 @@ $('#link-button-1').on('click', () => {
 })
 
 $('#link-button-2').on('click', () => { 
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+    window.open("https://thepumalovers.github.io/project-planning-client/#/");
 })
 
 $('#link-button-3').on('click', () => { 
