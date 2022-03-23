@@ -238,32 +238,18 @@ $('#link-button-3').on('click', () => {
 //Form Section
 /*------------*/
 
-//prevent all forms from submitting and refreshing page
-$('#name-form').on('submit', (event) => {
-    event.preventDefault();
+$('#contact-button-linkedin').on('click', () => { 
+    window.open("https://www.linkedin.com/in/matthew-scott-powell/");
 })
 
-$('#email-form').on('submit', (event) => {
-    event.preventDefault();
+$('#contact-button-github').on('click', () => { 
+    window.open("https://github.com/mpowell773?tab=repositories");
 })
 
-$('#message-form').on('submit', (event) => {
-    event.preventDefault();
+$('#contact-button-resume').on('click', () => { 
+    window.open("./website-photos/matt-powell-resume.pdf");
 })
 
-//submit button clears text fields, sends data off, and gives confirmation
-
-$('#submit-form').on('click', (event) => {
-    //code for future sending off
-    
-    //reset fields
-    $('#name-form').html('<input type="text" id="name-input">');
-    $('#email-form').html('<input type="text" id="name-input">');
-    $('#message-form').html('<input type="text" id="name-input">');
-
-    //confirmation
-    window.confirm('Thanks for contacting me! Unfortunately, this form is not yet working, but I am learning about backend in the current unit, so just wait a couple of weeks, resubmit, and I\'ll get back to you!');
-})
 
 });
 
