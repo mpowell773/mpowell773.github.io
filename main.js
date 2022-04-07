@@ -231,7 +231,7 @@ $('#link-button-2').on('click', () => {
 })
 
 $('#link-button-3').on('click', () => { 
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+    window.open('https://www.youtube.com/watch?v=J9wDerqLpM4&ab_channel=MattPowell');
 })
 
 /*------------*/
