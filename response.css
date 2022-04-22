@@ -76,10 +76,8 @@
     font-size: 85px;
   }
 
-  #submit-form {
-    height: 40px;
-    width: 65px;
-    font-size: 16px;
+  #contact button {
+    font-size: 85px
   }
 
   footer button {
@@ -186,22 +184,8 @@
     font-size: 85px;
   }
 
-  #contact {
-    grid-template-columns: 1fr 2fr 2fr;
-  }
-
-  #contact h3 {
-    font-size: 20px;
-  }
-
-  #message-form input {
-    padding-bottom: 100px;
-  }
-
-  #submit-form {
-    height: 45px;
-    width: 70px;
-    font-size: 18px;
+  #contact button {
+    font-size: 100px
   }
 
   footer button {
